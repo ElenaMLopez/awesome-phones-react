@@ -52,3 +52,29 @@ body {
 }
 
 /* Home view */
+/* phone List */
+
+.phone-list__title {
+  margin-left: 20px;
+}
+.phones-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+.phones-list a {
+  text-decoration: none;
+  color: #000;
+}
+.phone-list_element {
+  border-radius: 5px;
+  border: 1px solid #acacac;
+  list-style: none;
+  margin: 10px;
+  padding: 20px;
+  width: 230px;
+}

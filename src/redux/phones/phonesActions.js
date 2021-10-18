@@ -7,7 +7,7 @@ export const GET_PHONES = 'GET_PHONES';
 //export const CLEAR_PHONE = 'CLEAR_PHONE';
 
 export const getPhonesAction = () => async (dispatch, getState) => {
-  const res = API.get(REACT_APP_PHONES_URL)
+  const res = await API.get(REACT_APP_PHONES_URL)
   dispatch({
     type: GET_PHONES,
     payload: res.data

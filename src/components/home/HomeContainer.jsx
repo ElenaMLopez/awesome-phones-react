@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getPhonesAction } from '../../redux/phones/phonesActions';
+import PhoneList from '../phoneList/PhoneListContainer';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -10,7 +11,9 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return(
-    <div className=""> Phones list component </div>
+    <> 
+      <PhoneList />
+    </>
   )
 }
 
