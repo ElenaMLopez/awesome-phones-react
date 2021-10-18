@@ -78,3 +78,14 @@ body {
   padding: 20px;
   width: 230px;
 }
+
+/* phone card */
+.phone-name {
+  display: block;
+}
+
+.phone-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 110px;
+}
