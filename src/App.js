@@ -1,13 +1,16 @@
 import './App.css';
+import { Provider } from 'react-redux';
+import generateStore from './redux/store';
 import Header from './components/Header';
+import Home from './components/home/HomeContainer';
 
 function App() {
+  const store = generateStore();
   return (
-    <div className="App">
+    <Provider store={store} >
       <Header />
-      Hello phones
-      
-    </div>
+      <Home />
+    </Provider>
   );
 }
 
