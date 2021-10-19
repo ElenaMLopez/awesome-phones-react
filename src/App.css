@@ -53,7 +53,6 @@ body {
 }
 
 /* Home view */
-/* phone List */
 
 .phones-list_title {
   margin-left: 20px;
@@ -74,6 +73,7 @@ body {
 .phone-list_element {
   border-radius: 5px;
   border: 1px solid var(--color-light-grey);
+  height: 280px;
   list-style: none;
   margin: 10px auto;
   padding: 20px;
@@ -81,6 +81,7 @@ body {
 }
 
 /* Phone card */
+
 .phone-name {
   display: block;
 }
@@ -91,7 +92,8 @@ body {
   max-width: 110px;
 }
 
-/* phone detail view */
+/* Phone detail view */
+
 .phone-detail_container {
   border: 1px solid var(--color-light-grey);
   border-radius: 5px;
@@ -131,4 +133,36 @@ body {
 .price {
   font-weight: 500;
   text-align: left;
+}
+
+/* Loader */
+.loader-container {
+  margin: 150px auto;
+  text-align: center;
+}
+.loader{
+  animation-name: loader;
+  font-size: 4em;
+}
+@keyframes loader {
+  0% {
+    color: var(--color-primary);
+    transform: scale(.05);
+  }
+  50% {
+    color: var(--disable-color-tertiary);
+  }
+  100% {
+    color: var(--color-primary );
+    transform: scale(.75);
+  }
+}
+.loader {
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-duration: 1.5s; 
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running; 
+  animation-timing-function: cubic-bezier(1, 0, 0.6, 1); 
 }
