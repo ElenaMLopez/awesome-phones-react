@@ -10,13 +10,14 @@ const PhoneList = () => {
       <h1 className="phones-list_title">Nice phones list</h1>
       <ul className="phones-list">
         {phones.map( phone => {
-          console.log({phone})
           return (
             <li key={uuidv4()} className="phone-list_element">
               <PhoneCard 
                 name={phone.name}
                 price={phone.price}
                 image={`${REACT_APP_IMAGES_DIR}/${phone.imageFileName}`}
+                id={phone.id}
+                _id={phone._id}
                 />
             </li>
           )

@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { getPhonesAction } from '../../redux/phones/phonesActions';
-import PhoneList from '../phoneList/PhoneListContainer';
+import Loader from '../Loader';
+const PhoneList = lazy(() => import('../phoneList/PhoneListContainer'))
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,9 @@ const Home = () => {
   }, [])
   return(
     <> 
+    <Suspense fallback={<Loader />}>
       <PhoneList />
+    </Suspense>
     </>
   )
 }
