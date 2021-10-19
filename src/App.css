@@ -189,3 +189,32 @@ body {
   animation-play-state: running; 
   animation-timing-function: cubic-bezier(1, 0, 0.6, 1); 
 }
+
+/* Snacbar */
+.snackbar {
+  background-color: #333;
+  border-radius: 2px;
+  bottom: 30px;
+  color: #fff;
+  font-size: 1rem;
+  left: 50%;
+  margin-left: -125px;
+  min-width: 250px;
+  padding: 16px;
+  position: fixed;
+  text-align: center;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+  visibility: visible;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+  visibility: hidden;
+}

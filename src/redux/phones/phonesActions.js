@@ -31,7 +31,6 @@ export const deletePhoneAction = (id) => async (dispatch, getState) => {
   const res = await API.deleteElement(`${REACT_APP_PHONES_URL}/${id}`)
   const phonesState = getState().phones.phones;
   const newPhonesState = phonesState.filter(phone => phone._id !== id)
-  alert(res)
 
   dispatch({
     type: DELETE_PHONE,
