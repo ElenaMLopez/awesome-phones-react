@@ -22,6 +22,13 @@ body {
   --disable-color-tertiary: #575757;
 }
 /*  Common  */
+.btn {
+  display: block;
+  border: 1px solid var(--color-light-grey);
+  border-radius: 5px;
+  background: white;
+  padding: 5px;
+}
 .logo {
   border-radius: 50%;
   border: 1px solid var(--color-light-grey);
@@ -94,14 +101,10 @@ body {
 
 /* Phone detail view */
 
-.phone-detail_container {
-  border: 1px solid var(--color-light-grey);
-  border-radius: 5px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  max-width: 500px;
-  min-width: 256px;
+.phone-detail__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .phone-detail__back-link {
   border-radius: 5px;
@@ -111,6 +114,26 @@ body {
   padding: 5px;
   text-decoration: none;
 }
+.phone-detail__delete-button {
+    color: var(--text-color-primary);
+    cursor: pointer;
+    font-size: 1.01em;
+}
+.phone-detail__delete-button:hover {
+  background: var(--color-light-grey);
+  color: white;
+}
+
+.phone-detail_container {
+  border: 1px solid var(--color-light-grey);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 500px;
+  min-width: 256px;
+}
+
 .phone-detail__info-container {
   display: flex;
   flex-direction: column;
