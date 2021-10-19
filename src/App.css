@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Variables */
+:root {
+  --color-primary: #c03089;
+  --color-secondary: #c9328f;
+  --color-tertiary: #323232;
+  --color-light-grey: #999;
+  --text-color-primary: #222;
+  --text-color-secondary: #33475b;
+  --disable-color-primary: #c48aae;
+  --disable-color-secondary: #cb85b0;
+  --disable-color-tertiary: #575757;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/*  Common  */
+.logo {
+  border-radius: 50%;
+  border: 1px solid var(--color-light-grey);
+  color: var(--color-primary);
+  font-size: 35px;
+  height: 66px;
+  margin: 5px;
+  padding: 14px 10px 14px 9px;
+  width: 66px;
+}
+/* Header */
+.main-header {
+  height:100px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.header-container {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 20%);
+  display:flex;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Home view */
+/* phone List */
+
+.phones-list_title {
+  margin-left: 20px;
+}
+.phones-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+.phones-list a {
+  text-decoration: none;
+  color: #000;
+}
+.phone-list_element {
+  border-radius: 5px;
+  border: 1px solid #acacac;
+  list-style: none;
+  margin: 10px auto;
+  padding: 20px;
+  width: 230px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Phone card */
+.phone-name {
+  display: block;
+}
+
+.phone-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 110px;
 }
