@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPhonePhoneByIdAction, clearPhoneAction } from '../../redux/phones/phonesActions';
+import { getPhonePhoneByIdAction, clearPhoneAction, deletePhoneAction } from '../../redux/phones/phonesActions';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../Loader';
 import PhoneDetailComponent from './PhoneDetailComponent';
@@ -21,8 +21,15 @@ const PhoneDetailContainer = (props) =>{
         setIsLoading(false)
     }     
   },[phone])
+  const deletePhone = () => {
+     console.log('delete from container')
+     return dispatch(deletePhoneAction(phone._id))
+  }
+    
   
-  return isLoading ? <Loader /> : <PhoneDetailComponent phone={phone} />
+  
+  
+  return isLoading ? <Loader /> : <PhoneDetailComponent phone={phone} deletePhone={deletePhone} />
 }
 
 export default PhoneDetailContainer;

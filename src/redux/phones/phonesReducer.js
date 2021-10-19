@@ -1,4 +1,9 @@
-import { GET_PHONES, GET_PHONE_BY_ID, CLEAR_PHONE } from './phonesActions';
+import { 
+  GET_PHONES, 
+  GET_PHONE_BY_ID, 
+  CLEAR_PHONE, 
+  DELETE_PHONE 
+} from './phonesActions';
 import initialData from './phonesConstants';
 
 export default function phonesReducer (state= initialData, action) {
@@ -17,6 +22,11 @@ export default function phonesReducer (state= initialData, action) {
         return {
           ...state,
           phone: action.payload,
+        }
+      case DELETE_PHONE:
+        return {
+          ...state,
+          phones: action.payload,
         }
     default:
       return state;
