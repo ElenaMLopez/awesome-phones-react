@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const PhoneCard = ({ name, image, price, id, _id }) => {
+  
   return (
     <Link 
     to={{
