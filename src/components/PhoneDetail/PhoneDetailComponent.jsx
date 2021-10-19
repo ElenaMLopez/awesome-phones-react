@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 
+const imageDir = process.env.REACT_APP_IMAGES_DIR
+
 const PhoneDetailComponent = ({phone}) => {
 return (
   <div className="phone-detail_container">
-    <Link to="/phones" className="phone-detail_back-link">Home</Link>
-    <main className="phone-detail_info-container">
-      <h1 className="phone-detail_title">{phone.name}</h1>
-      <img className="" src="" alt={phone.name} />
-      <p className="phone-detail_description">{phone.description}</p>
-      <p className="phone-detail_description">Price: {phone.price} </p>
+    <Link to="/phones" className="phone-detail__back-link">Home</Link>
+    <main className="phone-detail__info-container">
+      <h1 className="phone-detail__title">{phone.name}</h1>
+      <img className="phone-detail__image" src={`${imageDir}/${phone.imageFileName}`} alt={phone.name} />
+      <p className="phone-detail__description">{phone.description}</p>
+      <p className="phone-detail__description price">Price: {phone.price} </p>
     </main>
   </div>
 )

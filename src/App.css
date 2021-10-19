@@ -29,6 +29,7 @@ body {
   font-size: 35px;
   height: 66px;
   margin: 5px;
+  min-width: 66px;
   padding: 14px 10px 14px 9px;
   width: 66px;
 }
@@ -68,11 +69,11 @@ body {
 }
 .phones-list a {
   text-decoration: none;
-  color: #000;
+  color: var(--text-color-primary);
 }
 .phone-list_element {
   border-radius: 5px;
-  border: 1px solid #acacac;
+  border: 1px solid var(--color-light-grey);
   list-style: none;
   margin: 10px auto;
   padding: 20px;
@@ -88,4 +89,46 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 110px;
+}
+
+/* phone detail view */
+.phone-detail_container {
+  border: 1px solid var(--color-light-grey);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 500px;
+  min-width: 256px;
+}
+.phone-detail__back-link {
+  border-radius: 5px;
+  border: 1px solid #666;
+  color: var(--text-color-primary);
+  display: inline;
+  padding: 5px;
+  text-decoration: none;
+}
+.phone-detail__info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px;
+}
+.phone-detail__title{
+  color: var(--text-color-primary);
+  margin: 0 auto;
+  display: block;
+}
+.phone-detail__image {
+  display:block;
+  margin: 0 auto;
+  width: 300px;
+}
+.phone-detail__description {
+  font-size: 1.2em;;
+  text-align: justify;
+}
+.price {
+  font-weight: 500;
+  text-align: left;
 }
