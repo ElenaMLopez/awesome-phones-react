@@ -74,7 +74,7 @@ body {
   border-radius: 5px;
   border: 1px solid #acacac;
   list-style: none;
-  margin: 10px;
+  margin: 10px auto;
   padding: 20px;
   width: 230px;
 }
