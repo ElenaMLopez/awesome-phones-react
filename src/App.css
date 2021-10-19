@@ -54,7 +54,7 @@ body {
 /* Home view */
 /* phone List */
 
-.phone-list__title {
+.phones-list_title {
   margin-left: 20px;
 }
 .phones-list {
@@ -79,7 +79,7 @@ body {
   width: 230px;
 }
 
-/* phone card */
+/* Phone card */
 .phone-name {
   display: block;
 }
