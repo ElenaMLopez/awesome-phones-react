@@ -10,6 +10,17 @@ const get = async (url, options) => {
     throw new Error(error.message);
   }
 }
+
+const deleteElement = async (url) => {
+  try {
+    const res = await axios.delete(url);
+    return res
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
+
 export default {
-  get
+  get,
+  deleteElement
 }

@@ -17,3 +17,10 @@ test('Renders a list of phones', async () => {
 
   expect(firstPhoneName && secondPhoneName).toBeInTheDocument();  
 })
+
+test('Render phone list title', async() => {
+  useSelectorMock.mockReturnValue(phonesMock);
+  render(<PhoneListContainer />, {wrapper: MemoryRouter});
+  const phoneListTitle = await screen.getByText(/Nice phones list/i);
+  expect(phoneListTitle).toBeInTheDocument()
+})

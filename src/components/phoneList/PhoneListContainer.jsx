@@ -21,10 +21,8 @@ const PhoneList = () => {
                 />
             </li>
           )
-          
         })}
       </ul>
-
     </div>
   )
 }

@@ -5,6 +5,7 @@ const { REACT_APP_PHONES_URL } = process.env;
 export const GET_PHONES = 'GET_PHONES';
 export const GET_PHONE_BY_ID = 'GET_PHONE_BY_ID';
 export const CLEAR_PHONE = 'CLEAR_PHONE';
+export const DELETE_PHONE = 'DELETE_PHONE';
 
 export const getPhonesAction = () => async (dispatch, getState) => {
   const res = await API.get(REACT_APP_PHONES_URL)
@@ -20,10 +21,20 @@ export const getPhonePhoneByIdAction = (id) => async (dispatch, getState) => {
     payload: res.data
   })
 };
-export const clearPhoneAction = () => async(dispatch, getState) => {
+export const clearPhoneAction = () => async(dispatch, getState) => {  
   dispatch({
     type: CLEAR_PHONE,
     payload: {}
+  })
+}
+export const deletePhoneAction = (id) => async (dispatch, getState) => {
+  const res = await API.deleteElement(`${REACT_APP_PHONES_URL}/${id}`)
+  const phonesState = getState().phones.phones;
+  const newPhonesState = phonesState.filter(phone => phone._id !== id)
+
+  dispatch({
+    type: DELETE_PHONE,
+    payload: {newPhonesState}
   })
 }
 

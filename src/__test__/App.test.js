@@ -6,7 +6,4 @@ test('Render header title', () => {
   const headerTitle = screen.getByText(/Awesome phones/i);
   expect(headerTitle).toBeInTheDocument();  
 });
-test('Render phone list title', () => {
-  render(<App />);
-  const phoneListTitle = screen.getByText(/Nice phones list/i);
-})
+
