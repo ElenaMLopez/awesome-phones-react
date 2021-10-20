@@ -21,6 +21,11 @@ body {
   --disable-color-secondary: #cb85b0;
   --disable-color-tertiary: #575757;
 }
+/* Utils */
+.capitalize {
+  text-transform: capitalize;
+}
+
 /*  Common  */
 .btn {
   display: block;
@@ -190,7 +195,7 @@ body {
   animation-timing-function: cubic-bezier(1, 0, 0.6, 1); 
 }
 
-/* Snacbar */
+/* Snackbar */
 .snackbar {
   background-color: #333;
   border-radius: 2px;
@@ -217,4 +222,16 @@ body {
   opacity: 0;
   transition: visibility 0s linear 300ms, opacity 300ms;
   visibility: hidden;
+}
+
+/* Add form */
+
+.add-form__label {
+  display: block;
+}
+.add-form__input {
+
+}
+.add-form__error {
+  color: red;
 }

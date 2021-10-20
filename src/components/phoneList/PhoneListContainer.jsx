@@ -1,13 +1,26 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+// import { addPhoneAction } from '../../redux/phones/phonesActions';
 import { v4 as uuidv4 } from 'uuid';
 import PhoneCard from '../phoneCard/PhoneCardComponent';
+import AddPhoneForm from '../addPhoneForm/AddPhoneComponent';
 const { REACT_APP_IMAGES_DIR } = process.env;
 
 const PhoneList = () => {
+  // const dispatch = useDispatch();
   const phones = useSelector(store => store.phones.phones)
+
+  const addPhone = () => {
+    // show modal
+    // dispatch(addPhoneAction())
+    
+  }
   return (
     <div>
-      <h1 className="phones-list_title">Nice phones list</h1>
+      <header>
+        <h1 className="phones-list_title">Nice phones list</h1>
+        <button onClick={addPhone}>Add Phone</button>
+        <AddPhoneForm />
+      </header>
       <ul className="phones-list">
         {phones.map( phone => {
           return (
