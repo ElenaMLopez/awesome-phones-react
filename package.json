@@ -21,7 +21,9 @@
   "scripts": {
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --detectOpenHandles --coverage",
+    "test": "react-scripts test --detectOpenHandles --coverage --watchAll=false",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run --config video=false ",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +43,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cypress/react": "^5.10.0",
+    "@cypress/webpack-dev-server": "^1.6.0",
+    "cypress": "^8.4.1",
+    "eslint-plugin-cypress": "^2.12.1"
   }
 }

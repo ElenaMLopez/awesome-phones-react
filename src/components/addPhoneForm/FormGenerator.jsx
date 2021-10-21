@@ -32,6 +32,7 @@ const FormGenerator = ({obj, formikSettings = {}}) => {
               <input
                 type={getTypeFromValue(entry)}
                 name={entry[0]}
+                id={entry[0]}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 readOnly={entry[0] === 'imageFileName'}
