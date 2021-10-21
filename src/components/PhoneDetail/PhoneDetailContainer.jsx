@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 import { getPhonePhoneByIdAction, clearPhoneAction, deletePhoneAction } from '../../redux/phones/phonesActions';
 import { useDispatch, useSelector } from 'react-redux';
 import useSnackbar from '../../hooks/useSnackbar';
-import { useHistory } from 'react-router-dom'
-
-
+import { useHistory } from 'react-router-dom';
 import Loader from '../Loader';
 import PhoneDetailComponent from './PhoneDetailComponent';
 import Snackbar from '../commons/Snackbar';
@@ -13,7 +11,7 @@ const PhoneDetailContainer = (props) =>{
   const id = props.location.detailProps._id;
   const dispatch = useDispatch();
   const phone = useSelector(store => store.phones.phone);
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const { isActive, message, openSnackBar } = useSnackbar();
   const _showSnackBarHandler = () => {
     openSnackBar('You have deleted this phone');
@@ -29,13 +27,13 @@ const PhoneDetailContainer = (props) =>{
 
   useEffect(() => {
     if (phone.imageFileName) {
-        setIsLoading(false)
+        setIsLoading(false);
     }     
   },[phone])
   const deletePhone = () => {
     _showSnackBarHandler();
-    setTimeout(() => { history.push('/phones') }, 3000)
-    return dispatch(deletePhoneAction(phone._id))
+    setTimeout(() => { history.push('/phones') }, 3000);
+    return dispatch(deletePhoneAction(phone._id));
   }
     
   const Details = () => <>

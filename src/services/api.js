@@ -19,8 +19,17 @@ const deleteElement = async (url) => {
     throw new Error(error.message);
   }
 }
+const addElement = async (url, body) => {
+  try {
+    const res = await axios.post(url, body);
+    return res;    
+  } catch (error) {
+    throw new Error(error.message);
+  }
+}
 
 export default {
   get,
-  deleteElement
+  deleteElement,
+  addElement
 }

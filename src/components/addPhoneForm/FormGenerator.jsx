@@ -1,11 +1,8 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-
 
 const FormGenerator = ({obj, formikSettings = {}}) => {
   const {handleChange, handleBlur, errors, touched, values} = formikSettings ;
-  const entries = Object.entries(obj) 
+  const entries = Object.entries(obj);
 
   const getTypeFromValue = (entry) => {
     let type 
@@ -20,14 +17,14 @@ const FormGenerator = ({obj, formikSettings = {}}) => {
     }
 
     return type;
-  }
+  };
   
   return (
     <>
     {
       entries.map(entry => {
         if(entry[0] === 'id' || entry[0] === '_id'){
-          return(null)
+          return(null);
         }else{
           return (
             <React.Fragment key={entry[0]}>
