@@ -9,6 +9,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1 {
+  color: var(--text-color-secondary )
+}
+
 /* Variables */
 :root {
   --color-primary: #c03089;
@@ -20,7 +24,22 @@ body {
   --disable-color-primary: #c48aae;
   --disable-color-secondary: #cb85b0;
   --disable-color-tertiary: #575757;
+  --error-color: #c40000;
+  /* z-index */
+  --fix-on-page: 2;
+  --modal-z-index: 3;
 }
+/* Utils */
+.capitalize {
+  text-transform: capitalize;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+
 /*  Common  */
 .btn {
   display: block;
@@ -28,6 +47,11 @@ body {
   border-radius: 5px;
   background: white;
   padding: 5px;
+}
+.btn:hover {
+  background: var(--color-primary);
+  color: white;
+  font-weight: bold;
 }
 .logo {
   border-radius: 50%;
@@ -39,6 +63,10 @@ body {
   min-width: 66px;
   padding: 14px 10px 14px 9px;
   width: 66px;
+}
+.modal {
+  text-align: center;
+  z-index: var(--modal-z-index);
 }
 /* Header */
 .main-header {
@@ -60,9 +88,11 @@ body {
 }
 
 /* Home view */
-
 .phones-list_title {
   margin-left: 20px;
+}
+.add-phone_btn {
+  margin: 0 20px 0 auto;
 }
 .phones-list {
   display: grid;
@@ -88,7 +118,6 @@ body {
 }
 
 /* Phone card */
-
 .phone-name {
   display: block;
 }
@@ -100,7 +129,6 @@ body {
 }
 
 /* Phone detail view */
-
 .phone-detail__header {
   display: flex;
   align-items: center;
@@ -190,10 +218,10 @@ body {
   animation-timing-function: cubic-bezier(1, 0, 0.6, 1); 
 }
 
-/* Snacbar */
+/* Snackbar */
 .snackbar {
-  background-color: #333;
-  border-radius: 2px;
+  background-color: var(--color-primary );
+  border-radius: 5px;
   bottom: 30px;
   color: #fff;
   font-size: 1rem;
@@ -217,4 +245,34 @@ body {
   opacity: 0;
   transition: visibility 0s linear 300ms, opacity 300ms;
   visibility: hidden;
+}
+
+/* Add form */
+.add-form__container {
+  text-align: center;
+}
+.add-form__form {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 50px auto;
+  max-width:500px;
+  text-align: left;
+  width: 50%;
+}
+
+.add-form__label {
+  display: block;
+  color: var(--text-color-primary )
+}
+.add-form__input {
+  border-radius: 5 px;
+  color: var(--color-tertiary);
+}
+.add-form__error {
+  color: var(--error-color);
+  margin-top: 0;
+}
+.add-form__submit-bt {
+  margin: 0 auto;
+  width: 50%;
 }

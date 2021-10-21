@@ -2,7 +2,6 @@ import { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPhonesAction } from '../../redux/phones/phonesActions';
 import Loader from '../Loader';
-// const PhoneList = lazy(() => import('../phoneList/PhoneListContainer'))
 import PhoneListContainer from '../phoneList/PhoneListContainer';
 
 const Home = () => {

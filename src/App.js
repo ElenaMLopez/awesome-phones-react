@@ -12,6 +12,9 @@ function App() {
     <Provider store={store} >
       <Router>
         <Header />
+        <Route exact path="/">
+          <Redirect to="/phones" />
+        </Route>
         <Route exact path='/phones' component={Home} />
         <Route exact path='/phones/detail/:id' render={(props) => ( 
           props.location.detailProps !== undefined 

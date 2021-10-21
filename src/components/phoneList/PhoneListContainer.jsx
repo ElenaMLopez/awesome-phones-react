@@ -1,14 +1,23 @@
-import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import PhoneCard from '../phoneCard/PhoneCardComponent';
+import AddPhoneForm from '../addPhoneForm/AddPhoneComponent';
 const { REACT_APP_IMAGES_DIR } = process.env;
 
 const PhoneList = () => {
-  const phones = useSelector(store => store.phones.phones)
+  const phones = useSelector(store => store.phones.phones);
+  const [showAddPhone, setShowAddPhoneForm] = useState(false);
+
   return (
     <div>
-      <h1 className="phones-list_title">Nice phones list</h1>
-      <ul className="phones-list">
+      <header>
+        <h1 className="phones-list_title">Nice phones list</h1>
+        <button className="add-phone_btn btn" onClick={() => setShowAddPhoneForm(!showAddPhone)}>{showAddPhone ? 'Close': 'Add Phone' }</button>
+        {showAddPhone && <AddPhoneForm />}
+        
+      </header>
+      {!showAddPhone && <ul className="phones-list">
         {phones.map( phone => {
           return (
             <li key={uuidv4()} className="phone-list_element">
@@ -22,9 +31,9 @@ const PhoneList = () => {
             </li>
           )
         })}
-      </ul>
+      </ul>}
     </div>
   )
-}
+};
 
 export default PhoneList;
