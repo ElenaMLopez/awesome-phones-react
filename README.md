@@ -1,35 +1,43 @@
 # Awesome phones
 
 ## What is this?
-You can see how a React app works with a custom API & MongoDb.
+You can see how a React app works with a custom API & MongoDB for data permanence.
 
 
 ## How to run the app
 ### First step
-You need a back to run the app. For this you can visit this [repo](https://github.com/ElenaMLopez/awesome-phones-api) and clone it. There you can find a complete information about how to run this back, it is quite easy if you have docker ^.^
+You need a back to run the app. For this, you can visit this [repo](https://github.com/ElenaMLopez/awesome-phones-api) and clone it. There you can find a piece of complete information about how to run this back, it is quite easy if you have docker ^.^
 
-After see the message `awesome-phones-api_mongo-seed_1 exited with code 0` in the console, (don't worry this is normal), you are able to run the front.
+After seeing the message `awesome-phones-api_mongo-seed_1 exited with code 0` in the console, (don't worry this is normal), you are able to run the front.
 
 ### Second step
-After clone this repository you have two options:
+After cloning this repository you have two options:
 1. You have docker installed (recommended), just type in the console:
 #### `docker-compose up`
 This will run the app and you can visit the `localhost://8080` and see the results.
 
 2. You prefer to run the app with Node.js. Open the folder in the console and run the 
-#### `yarn intall` or `npm install`
+#### `yarn install or `npm install`
 After this, you can run:
 #### `yarn start` or `npm run`
+
+## How to test the app 
+
+You can test the app by running the following commands:
+1. React-testing-library : **yarn test**
+2. E2E test with cypress: **yarn cypress**
 
 ## Contributing
 
 ### Bug and feature basic branch naming
 
-Please, when you create a new branch, for resolve a bug or create a new feature, please name this branchs like this:
+Please, when you create a new branch, to resolve a bug or create a new feature, please name these branches like this:
 - Feature: `Feature/<feature-name>#issue-number`
 - Bug: `Bugfix/<bugfix-name>#issue-number`
 
-This will allow to github actions to run test before update the remote branch.
+
+Hope you like it! 😊 
+And please, all constructive feedback is always the best to improve my knowledge, so thanks for it!!!
 
 
 # React info:
