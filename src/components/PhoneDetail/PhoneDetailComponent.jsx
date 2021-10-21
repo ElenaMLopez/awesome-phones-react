@@ -16,7 +16,6 @@ return (
       <p className="phone-detail__description price">Price: {phone.price} </p>
     </main>
   </div>
-)
-}
+)}
 
 export default PhoneDetailComponent;

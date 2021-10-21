@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-
 describe('Render Home view', () => {
   beforeEach(() => {
     cy.visit('http://localhost:8080')

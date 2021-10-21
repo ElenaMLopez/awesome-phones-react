@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { addPhoneAction } from '../../redux/phones/phonesActions';
 import { v4 as uuidv4 } from 'uuid';
 import PhoneCard from '../phoneCard/PhoneCardComponent';
 import AddPhoneForm from '../addPhoneForm/AddPhoneComponent';
 const { REACT_APP_IMAGES_DIR } = process.env;
 
 const PhoneList = () => {
-  // const dispatch = useDispatch();
   const phones = useSelector(store => store.phones.phones);
   const [showAddPhone, setShowAddPhoneForm] = useState(false);
 

@@ -1,7 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import PhoneListContainer from '../components/phoneList/PhoneListContainer';
 import user from "@testing-library/user-event";
-
 import { phonesMock } from './mocks/phonesMock';
 import { MemoryRouter } from 'react-router-dom';
 import { useSelectorMock,useDispatchMock } from './mocks/reactReduxMock';
@@ -37,5 +36,4 @@ test('Render add phone button', async() => {
     const closeButton = screen.getByText(/Close/i)
     expect(closeButton).toBeInTheDocument()
   })
-
 })

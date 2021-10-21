@@ -10,13 +10,11 @@ beforeEach(() => {
   useSelectorMock.mockClear();
   useDispatchMock.mockClear();
 })
-
 const locationMock = {
   detailProps: {
     id: 1
   }
 }
-
 const dispatch = jest.fn();
 
 test('Send description to detail component', async () => {
@@ -27,7 +25,6 @@ test('Send description to detail component', async () => {
   const phoneDescription = await screen.findByText(/Poopayee bananaaaa/i);
   expect(phoneDescription).toBeInTheDocument();
 })
-
 
 test('It shows a message when user delete a phone', async () => {
   useSelectorMock.mockReturnValue(phoneMock);
