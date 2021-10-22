@@ -7,6 +7,10 @@ You can see how a React app works with a custom API & MongoDB for data persisten
      src="https://user-images.githubusercontent.com/27022503/138403513-9e6901a1-427b-4b30-a8ed-018583870e1c.png" 
 />
 
+<img 
+     width="500"  
+     src="https://user-images.githubusercontent.com/27022503/138441481-e312084a-2c77-462b-8c08-c366acd91705.gif" 
+/>
 
 
 ## How to run the app 🚀
