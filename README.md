@@ -6,10 +6,7 @@ You can see how a React app works with a custom API & MongoDB for data persisten
      width="500"  
      src="https://user-images.githubusercontent.com/27022503/138403513-9e6901a1-427b-4b30-a8ed-018583870e1c.png" 
 />
-<img 
-     width="500"  
-     src="https://user-images.githubusercontent.com/27022503/138403738-6798c206-8124-4128-878a-c83b57294c9d.gif" 
-/>
+
 
 
 ## How to run the app 🚀
@@ -20,15 +17,13 @@ You need a back to run the app. For this, you can visit this [repo](https://gith
 After seeing the message `awesome-phones-api_mongo-seed_1 exited with code 0` in the console, (don't worry this is normal), you are able to run the front.
 
 ### Second step 🏃‍♀️
-After cloning this repository you have two options:
-1. You have docker installed (recommended), just type in the console:
-#### `docker-compose up`
-This will run the app and you can visit the `localhost://8080` and see the results.
 
-2. You prefer to run the app with Node.js. Open the folder in the console and run the 
+Run the app with Node.js. Open the folder in the console and run the 
 #### `yarn install` or `npm install` 📦
 After this, you can run:
 #### `yarn start` or `npm run` 🎠
+
+Now can visit your `localhost://8080` and see the result 
 
 ## How to test the app 🃏
 
