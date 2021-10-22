@@ -3,11 +3,16 @@ version: '3.5'
 services:
 
   app: 
-    image: node:12-alpine
+    # image: node:16
+    container_name: phones-awesome
+    build: .
+    command: yarn install
     volumes: 
       - ./:/app
+      - ./app/node_modules
     working_dir: /app
     ports: 
       - 8080:8080
-    command: yarn start
+    stdin_open: true
     tty: true
+    command: npm run start
