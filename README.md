@@ -2,6 +2,14 @@
 
 ## What is this?
 You can see how a React app works with a custom API & MongoDB for data permanence.
+<img 
+     width="500"  
+     src="https://user-images.githubusercontent.com/27022503/138403513-9e6901a1-427b-4b30-a8ed-018583870e1c.png" 
+/>
+<img 
+     width="500"  
+     src="https://user-images.githubusercontent.com/27022503/138403738-6798c206-8124-4128-878a-c83b57294c9d.gif" 
+/>
 
 
 ## How to run the app
