@@ -39,7 +39,7 @@ After this you have a docker image to run with the next command:
 
 You can test the app by running the following commands:
 1. React-testing-library : **yarn test**
-2. E2E test with cypress: **yarn cypress**
+2. E2E test with cypress: **yarn cypress** (you must to have the app running)
 
 ## Contributing
 
