@@ -23,7 +23,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        # node-version: [10.x, 12.x, 14.x] to make the buil in other NodeJs versions
+        # node-version: [10.x, 12.x, 14.x] to make the build in other NodeJs versions
 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
